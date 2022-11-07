@@ -7,7 +7,19 @@ selection algorithm selects the subset of HW accelerators that maximizes perform
 defined area (HW resources) budget.
 
 If you use Trireme in your research, we would appreciate a citation to:
+```shell
+@misc{https://doi.org/10.48550/arxiv.2201.08603,
+  doi = {10.48550/ARXIV.2201.08603},  
+  url = {https://arxiv.org/abs/2201.08603},  
+  author = {Zacharopoulos, Georgios and Ejjeh, Adel and Jing, Ying and Yang, En-Yu and Jia, Tianyu and Brumar, Iulian and Intan, Jeremy and Huzaifa, Muhammad and Adve, Sarita and Adve, Vikram and Wei, Gu-Yeon and Brooks, David},  
+  keywords = {Hardware Architecture (cs.AR), FOS: Computer and information sciences, FOS: Computer and information sciences},  
+  title = {Trireme: Exploring Hierarchical Multi-Level Parallelism for Domain Specific Hardware Acceleration},  
+  publisher = {arXiv},  
+  year = {2022},  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
 
+```
 # Installation
 
 Tireme comes with an automated installer that installs the HPVM compiler then sets up Trireme as a sub-project in HPVM. The installer also has an option to use an existing HPVM installation.
@@ -67,9 +79,9 @@ the profiling information.
 
 ### 2) Identification of candidates for acceleration and estimation of Latency, Area and I/O requirements.   
 
-We make sure that the LLVM_BUILD line in "run_sys_aw.sh" points to the path of the LLVM8 build directory:
+We make sure that the LLVM_BUILD line in "run_sys_aw.sh" points to the path of the LLVM9 build directory:
 
-    LLVM_BUILD=path/to/llvm/build
+    LLVM_BUILD=path/to/hpvm/build
 
 The following script invokes the AccelSeeker Analysis passes and generates the files needed to construct the final Merit/Cost estimation.
 The files generated are: FCI.txt  IO.txt  LA.txt 

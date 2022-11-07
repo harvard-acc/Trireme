@@ -75,8 +75,8 @@ if [[ $CLONE_HPVM == true ]]; then
   fi
   if [[ $SKIP_CLONE == false ]]; then 
     echo "Cloning HPVM into $HPVM_DIR"
-    echo "git clone git@gitlab.engr.illinois.edu:llvm/hpvm-release.git $HPVM_DIR"
-    git clone git@gitlab.engr.illinois.edu:llvm/hpvm-release.git $HPVM_DIR
+    echo "git clone https://gitlab.engr.illinois.edu/llvm/hpvm-release.git -b v1.0 $HPVM_DIR"
+    git clone https://gitlab.engr.illinois.edu/llvm/hpvm-release.git -b v1.0 $HPVM_DIR
     cd $HPVM_DIR/hpvm
     bash ./install.sh -j $NT -t X86 --no-pypkg --no-params
     if [ $? -ne 0 ]; then
