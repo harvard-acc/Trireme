@@ -22,6 +22,10 @@ If you use Trireme in your research, we would appreciate a citation to:
 ```
 # Installation
 
+You can download the Trireme repository using the following code:    
+
+    git clone --branch hpvm-integration https://github.com/harvard-acc/Trireme.git
+
 Tireme comes with an automated installer that installs the HPVM compiler then sets up Trireme as a sub-project in HPVM. The installer also has an option to use an existing HPVM installation.
 
 To install Trireme:
@@ -59,11 +63,13 @@ This will set up the Trireme components in your existing HPVM repo. The path pro
 
 # Usage
 
-For testing, audio decoder https://github.com/ILLIXR/audio_pipeline from the [ILLIXR](https://github.com/ILLIXR/ILLIXR), the Illinois Extended Reality testbed, of University of Illinois at Urbana-Champaign is used. The audio pipeline is responsible for both recording and playing back spatialized audio for XR.
+For testing, audio decoder https://github.com/ILLIXR/audio_pipeline from the [ILLIXR](https://github.com/ILLIXR/ILLIXR), the Illinois Extended Reality testbed, of University of Illinois at Urbana-Champaign is used. The audio pipeline is responsible for both recording and playing back spatialized audio for XR. The audio decoder here is used to play back the encoded XR audio.
 
     cd audioDecoding
 
-### 1) Collect dynamic profiling information and generate the annotated  Intermediate Representation (IR) files.
+When working on other applications, you can generate the HPVM IR (e.g. `main.hpvm.ll` in audioDecoding) first and follow the following steps for using Trireme.
+
+<!-- ### 1) Collect dynamic profiling information and generate the annotated  Intermediate Representation (IR) files.
 
     cd sim
 
@@ -75,9 +81,9 @@ We make sure that the LLVM lines in "Makefile_AccelSeeker" point to the path of 
 Then we run the instrumented binary with the appropriate input parameters and generate the annotated IR files using
 the profiling information.    
 
-    make profile
+    make profile -->
 
-### 2) Identification of candidates for acceleration and estimation of Latency, Area and I/O requirements.   
+### 1) Identification of candidates for acceleration and estimation of Latency, Area and I/O requirements.   
 
 We make sure that the LLVM_BUILD line in "run_sys_aw.sh" points to the path of the LLVM9 build directory:
 
@@ -89,7 +95,7 @@ The files generated are: FCI.txt  IO.txt  LA.txt
     ./run_sys_aw.sh
 
 
-### 3) Merit, Cost Estimation of candidates for acceleration and application of the Overlapping Rule.
+### 2) Merit, Cost Estimation of candidates for acceleration and application of the Overlapping Rule.
 
 The following script generates the Merit/Cost (MC) file along with the implementation of the Overlapping rule in the final Merit/Cost/Indexes (MCI) file.
 The files generated are: MCI.txt  MC.txt

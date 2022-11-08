@@ -11,7 +11,7 @@ set -e
 
 # Start Editing.
 # LLVM build directory - Edit this line. LLVM_BUILD=path/to/llvm/build
-LLVM_BUILD=~georgios/llvm-9.0.0/build
+LLVM_BUILD=/shared/workspace/yingj4/trireme/hpvm/hpvm/build/
 
 # BENCH NAME - Edit this line to use it to another benchmark/application.
 #BENCH=h264
