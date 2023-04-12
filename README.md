@@ -8,15 +8,19 @@ defined area (HW resources) budget.
 
 If you use Trireme in your research, we would appreciate a citation to:
 ```shell
-@misc{https://doi.org/10.48550/arxiv.2201.08603,
-  doi = {10.48550/ARXIV.2201.08603},  
-  url = {https://arxiv.org/abs/2201.08603},  
-  author = {Zacharopoulos, Georgios and Ejjeh, Adel and Jing, Ying and Yang, En-Yu and Jia, Tianyu and Brumar, Iulian and Intan, Jeremy and Huzaifa, Muhammad and Adve, Sarita and Adve, Vikram and Wei, Gu-Yeon and Brooks, David},  
-  keywords = {Hardware Architecture (cs.AR), FOS: Computer and information sciences, FOS: Computer and information sciences},  
-  title = {Trireme: Exploring Hierarchical Multi-Level Parallelism for Domain Specific Hardware Acceleration},  
-  publisher = {arXiv},  
-  year = {2022},  
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@article{10.1145/3580394,
+	author = {Zacharopoulos, Georgios and Ejjeh, Adel and Jing, Ying and Yang, En-Yu and Jia, Tianyu and Brumar, Iulian and Intan, Jeremy and Huzaifa, Muhammad and Adve, Sarita and Adve, Vikram and Wei, Gu-Yeon and Brooks, David},
+	title = {Trireme: Exploration of Hierarchical Multi-Level Parallelism for Hardware Acceleration},
+	year = {2023},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	issn = {1539-9087},
+	url = {https://doi.org/10.1145/3580394},
+	doi = {10.1145/3580394},
+	note = {Just Accepted},
+	journal = {ACM Trans. Embed. Comput. Syst.},
+	month = {jan},
+	keywords = {compiler techniques and optimizations, design tools, heterogeneous systems parallelism, accelerators, ASICs}
 }
 
 ```
