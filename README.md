@@ -24,6 +24,15 @@ If you use Trireme in your research, we would appreciate a citation to:
 }
 
 ```
+# Prerequisite
+
+__We recommend you to install HPVM first.__ Please follow the [instructions](https://hpvm.readthedocs.io/en/latest/build-hpvm.html) to install HPVM:
+
+    git clone https://gitlab.engr.illinois.edu/llvm/hpvm-release.git -b v1.0 --recursive
+
+Please also note that HPVM v1.0 requires `CMake>=3.18`. Ubuntu 20.04 by default uses 3.16, so you may want to install your own CMake and add it to the environment path.
+
+
 # Installation
 
 You can download the Trireme repository using the following code:    
