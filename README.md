@@ -30,8 +30,18 @@ __We recommend you to install HPVM first.__ Please follow the [instructions](htt
 
     git clone https://gitlab.engr.illinois.edu/llvm/hpvm-release.git -b v1.0 --recursive
 
-Please also note that HPVM v1.0 requires `CMake>=3.18`. Ubuntu 20.04 by default uses 3.16, so you may want to install your own CMake and add it to the environment path.
+Please also note that HPVM v1.0 requires `CMake>=3.18`. Ubuntu 20.04 locks CMake at 3.16, so you may want to install your own CMake and add it to the environment path. HPVM also requires CUDNN 7. One way to circumvent the CUDNN version problem is to use [Anaconda](https://www.anaconda.com/). For example, you can run the following commands to generate a conda environment for building and running Trireme:
+```shell
+conda create --name trireme python=3.6 cudatoolkit=10.1 cudnn=7.6.5
+conda activate trireme
+```
+When building HPVM inside the HPVM folder (e.g. `hpvm-release/hpvm`), you can run the following command to avoid building the python-related parts of HPVM:
 
+    bash ./install.sh -j $N -t X86 --no-pypkg --no-params
+
+`N` is the desired number of threads to build HPVM.
+
+When [testing](https://hpvm.readthedocs.io/en/latest/build-hpvm.html#tests) your built HPVM by `check_hpvm_pass` under `hpvm-release/hpvm/build`, you may find that the tests related to the python packages fail. This will not affect the functionality of Trireme, so please feel free to ignore them.
 
 # Installation
 
