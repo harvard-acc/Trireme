@@ -139,4 +139,4 @@ BENCHMARK-NAME ACCELERATOR-NAME MERIT(CYCLES SAVED) COST(LUTS) FUNCTION_INDEXES
 
 Georgios Zacharopoulos georgios@seas.harvard.edu Date: July, 2021
 
-Ying Jing yingj4@illinois.edu Data: April, 2023
+Ying Jing yingj4@illinois.edu Date: April, 2023
