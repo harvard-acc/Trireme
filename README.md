@@ -35,7 +35,7 @@ Please also note that HPVM v1.0 requires `CMake>=3.18`. Ubuntu 20.04 locks CMake
 conda create --name trireme python=3.6 cudatoolkit=10.1 cudnn=7.6.5
 conda activate trireme
 ```
-Inside the [`set_paths.sh`](https://gitlab.engr.illinois.edu/llvm/hpvm-release/-/blob/v1.0/hpvm/set_paths.sh) file, please set [`CUDA_TOOLKIT_PATH`](https://gitlab.engr.illinois.edu/llvm/hpvm-release/-/blob/v1.0/hpvm/set_paths.sh#L4) to your Anaconda environment path (E.g. `$PATH_TO_YOUR_ANACONDA/env/trireme`.). Please also change [`CUDA_LIB_PATH`](https://gitlab.engr.illinois.edu/llvm/hpvm-release/-/blob/v1.0/hpvm/set_paths.sh#L10) to `CUDA_LIB_PATH=$CUDA_TOOLKIT_PATH/lib/`. Please then do a source of `set_paths.sh` to configure the environment variables:
+Inside the [`set_paths.sh`](https://gitlab.engr.illinois.edu/llvm/hpvm-release/-/blob/v1.0/hpvm/set_paths.sh) file, please set [`CUDA_TOOLKIT_PATH`](https://gitlab.engr.illinois.edu/llvm/hpvm-release/-/blob/v1.0/hpvm/set_paths.sh#L4) to your Anaconda environment path (E.g. `$PATH_TO_YOUR_ANACONDA/envs/trireme`.). Please also change [`CUDA_LIB_PATH`](https://gitlab.engr.illinois.edu/llvm/hpvm-release/-/blob/v1.0/hpvm/set_paths.sh#L10) to `CUDA_LIB_PATH=$CUDA_TOOLKIT_PATH/lib/`. Please then do a source of `set_paths.sh` to configure the environment variables:
 
     source set_paths.sh
 
