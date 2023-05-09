@@ -12,15 +12,19 @@ If you use Trireme in your research, we would appreciate a citation to:
 	author = {Zacharopoulos, Georgios and Ejjeh, Adel and Jing, Ying and Yang, En-Yu and Jia, Tianyu and Brumar, Iulian and Intan, Jeremy and Huzaifa, Muhammad and Adve, Sarita and Adve, Vikram and Wei, Gu-Yeon and Brooks, David},
 	title = {Trireme: Exploration of Hierarchical Multi-Level Parallelism for Hardware Acceleration},
 	year = {2023},
+	issue_date = {May 2023},
 	publisher = {Association for Computing Machinery},
 	address = {New York, NY, USA},
+	volume = {22},
+	number = {3},
 	issn = {1539-9087},
 	url = {https://doi.org/10.1145/3580394},
 	doi = {10.1145/3580394},
-	note = {Just Accepted},
 	journal = {ACM Trans. Embed. Comput. Syst.},
-	month = {jan},
-	keywords = {compiler techniques and optimizations, design tools, heterogeneous systems parallelism, accelerators, ASICs}
+	month = {apr},
+	articleno = {53},
+	numpages = {23},
+	keywords = {compiler techniques and optimizations, design tools, Accelerators, ASICs, heterogeneous systems parallelism}
 }
 
 ```
