@@ -3,8 +3,7 @@
 # Overview
 
 The Trireme© framework is a tool for automatically exploring hierarchical multi-level parallelism for domain specific hardware acceleration. Trireme identifies and selects HW accelerators directly from the application source files, while suggesting parallelism-related optimizations (Task Level, Loop Level and Pipeline Parallelism). It is built within LLVM9 compiler infrastructure and consists of Analysis Passes that estimate Software (SW) latency, Hardware (HW) latency, Area and I/O requirements. Subsequently, an exact 
-selection algorithm selects the subset of HW accelerators that maximizes performance (speedup) under a user
-defined area (HW resources) budget.
+selection algorithm selects the subset of HW accelerators that maximizes performance (speedup) under a user defined area (HW resources) budget.
 
 If you use Trireme in your research, we would appreciate a citation to:
 ```shell
@@ -116,9 +115,11 @@ the profiling information.
 
 ### 1) Identification of candidates for acceleration and estimation of Latency, Area and I/O requirements.   
 
-We make sure that the LLVM_BUILD line in "run_sys_aw.sh" points to the path of the LLVM9 build directory:
+We make sure that the [`HPVM_BUILD`](https://github.com/harvard-acc/Trireme/blob/hpvm-integration/audioDecoding/run_sys_aw.sh#L14) line in [`run_sys_aw.sh`](https://github.com/harvard-acc/Trireme/blob/hpvm-integration/audioDecoding/run_sys_aw.sh) points to the path of the HPVM build directory:
 
-    LLVM_BUILD=path/to/hpvm/build
+    HPVM_BUILD=path/to/hpvm/build
+
+Note that [`run_trireme_analysis.sh`](https://github.com/harvard-acc/Trireme/blob/hpvm-integration/run_trireme_analysis.sh) is a template file similar to [`run_sys_aw.sh`](https://github.com/harvard-acc/Trireme/blob/hpvm-integration/audioDecoding/run_sys_aw.sh). Please also change the [`HPVM_BUILD`](https://github.com/harvard-acc/Trireme/blob/hpvm-integration/run_trireme_analysis.sh#L14) line in it.
 
 The following script invokes the AccelSeeker Analysis passes and generates the files needed to construct the final Merit/Cost estimation.
 The files generated are: FCI.txt  IO.txt  LA.txt 
