@@ -10,8 +10,8 @@
 set -e
 
 # Start Editing.
-# LLVM build directory - Edit this line. LLVM_BUILD=path/to/llvm/build
-LLVM_BUILD=/shared/workspace/yingj4/trireme/hpvm/hpvm/build/
+# LLVM build directory - Edit this line. HPVM_BUILD=path/to/llvm/build
+HPVM_BUILD=/shared/workspace/yingj4/trireme-2023/hpvm-release/hpvm/build/
 
 # BENCH NAME - Edit this line to use it to another benchmark/application.
 #BENCH=h264
@@ -34,7 +34,7 @@ else
 fi
 
 # Collects IO information, Indexes info and generates .gv call graph files for every function.
-#$LLVM_BUILD/bin/opt -load $LLVM_BUILD/lib/AccelSeekerIO.so -AccelSeekerIO -stats    > /dev/null  $BENCH
+#$HPVM_BUILD/bin/opt -load $HPVM_BUILD/lib/AccelSeekerIO.so -AccelSeekerIO -stats    > /dev/null  $BENCH
 #mkdir gvFiles; mv *.gv gvFiles/.
 #exit 0;
 # Collects SW, HW and AREA estimation bottom up.
@@ -42,7 +42,7 @@ for ((i=0; i <= $TOP_LEVEL ; i++)) ; do
 	echo "$i"
  printf "$i" > level.txt
 
-$LLVM_BUILD/bin/opt -load $LLVM_BUILD/lib/AccelSeeker.so -AccelSeeker -stats    > /dev/null  $BENCH
+$HPVM_BUILD/bin/opt -load $HPVM_BUILD/lib/AccelSeeker.so -AccelSeeker -stats    > /dev/null  $BENCH
 done
 
 cp LA_$TOP_LEVEL.txt LA.txt; mkdir analysis_data; mv SW_*.txt HW_*.txt AREA_*.txt LA_*.txt analysis_data/.  
